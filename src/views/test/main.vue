@@ -36,7 +36,6 @@ export default {
       let res = await this.$axios.get('/search/repositories', {
         params
       })
-      if (typeof res === 'string') res = JSON.parse(res)
       this.totals = res.total_count
       this.repositories = res.items
     }
